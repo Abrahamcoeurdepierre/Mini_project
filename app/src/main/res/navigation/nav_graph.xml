@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstQuestionFragment">
+
+    <fragment
+        android:id="@+id/firstQuestionFragment"
+        android:name="com.example.questionquiz.FirstQuestionFragment"
+        android:label="fragment_first_question"
+        tools:layout="@layout/fragment_first_question" >
+        <action
+            android:id="@+id/action_firstQuestionFragment_to_secondQuestionFragment"
+            app:destination="@id/secondQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondQuestionFragment"
+        android:name="com.example.questionquiz.SecondQuestionFragment"
+        android:label="fragment_second_question"
+        tools:layout="@layout/fragment_second_question" >
+        <action
+            android:id="@+id/action_secondQuestionFragment_to_thirdQuestionFragment"
+            app:destination="@id/thirdQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestionFragment"
+        android:name="com.example.questionquiz.ThirdQuestionFragment"
+        android:label="fragment_third_question"
+        tools:layout="@layout/fragment_third_question" >
+        <action
+            android:id="@+id/action_thirdQuestionFragment_to_printFragment"
+            app:destination="@id/printFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/printFragment"
+        android:name="com.example.questionquiz.PrintFragment"
+        android:label="fragment_print"
+        tools:layout="@layout/fragment_print" >
+        <action
+            android:id="@+id/action_printFragment_to_firstQuestionFragment"
+            app:destination="@id/firstQuestionFragment" />
+    </fragment>
+</navigation>
